@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio JS DOM, Eventos y Funciones</title>
+		<script src="js/32-ejercicio-dom.js"></script>
+		<style>
+			.box {
+				display: block;
+				float: left;
+				border: 2px solid black;
+				padding: 20px;
+				box-shadow: 1px 1px 5px black;
+				width: 300px;
+				margin: 10px;
+				border-radius: 10px;
+				height: 220px;
+			}
+			.box.dashed {
+				box-shadow: none;
+				text-align: center;
+				border: 3px dashed black;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 1. Formulario con los campos, nombre, apellidos y edad
+            2. Boton enviar formulario con evento submit
+            3. Luego de enviar el formulario, mostrar datos por pantalla
+            4. Validacion del formulario
+        -->
+		<h1>Ejercicio JS: DOM, Eventos y Funciones</h1>
+		<div class="box">
+			<form action="#" method="POST" id="form" onsubmit="return false">
+				<label for="nombre">Nombre</label><br />
+				<input type="text" name="nombre" id="nombre" /> <br />
+				<br />
+				<label for="apellidos">Apellidos</label><br />
+				<input type="text" name="apellidos" id="apellidos" />
+				<br /><br />
+				<label for="edad">Edad</label><br />
+				<input type="number" name="edad" id="edad" /> <br />
+				<br />
+				<input type="submit" value="Enviar" id="submit" />
+			</form>
+		</div>
+		<div class="box dashed">
+			<h3>Datos del formulario</h3>
+			<hr />
+		</div>
+	</body>
+</html>

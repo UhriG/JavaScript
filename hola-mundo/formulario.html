@@ -23,6 +23,10 @@
 				text-align: center;
 				border: 3px dashed black;
 			}
+			.error {
+				color: red;
+				font-weight: 600;
+			}
 		</style>
 	</head>
 	<body>
@@ -36,12 +40,16 @@
 			<form action="#" method="POST" id="form" onsubmit="return false">
 				<label for="nombre">Nombre</label><br />
 				<input type="text" name="nombre" id="nombre" /> <br />
+				<div class="error err-name"></div>
 				<br />
 				<label for="apellidos">Apellidos</label><br />
 				<input type="text" name="apellidos" id="apellidos" />
-				<br /><br />
+				<br />
+				<div class="error err-apellido"></div>
+				<br />
 				<label for="edad">Edad</label><br />
 				<input type="number" name="edad" id="edad" /> <br />
+				<div class="error err-edad"></div>
 				<br />
 				<input type="submit" value="Enviar" id="submit" />
 			</form>

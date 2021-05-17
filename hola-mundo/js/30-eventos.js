@@ -28,14 +28,15 @@ window.addEventListener("load", () => {
 
 	// Mouse over
 	boton.addEventListener("mouseover", function () {
-		boton.style.backgroundColor = "lightblue";
-		boton.style.color = "black";
+		// this hace referencia en este caso al boton
+		this.style.backgroundColor = "lightblue";
+		this.style.color = "black";
 	});
 
 	// Mouse out
 	boton.addEventListener("mouseout", function () {
-		boton.style.backgroundColor = "blue";
-		boton.style.color = "white";
+		this.style.backgroundColor = "blue";
+		this.style.color = "white";
 	});
 
 	// Eventos teclado

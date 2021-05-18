@@ -10,7 +10,10 @@ window.addEventListener("load", () => {
 		.then((data) => {
 			usuarios = data;
 			listarUsuarios(usuarios);
-
+			return getInfo();
+		})
+		.then((data) => {
+			document.querySelector("#profesor").innerHTML = data;
 			// Cuando termina la petición anterior llamo a la funcion getUsuario para empezar una peticion nueva
 			return getUsuario();
 		})
@@ -18,6 +21,9 @@ window.addEventListener("load", () => {
 		.then((data) => {
 			var usuario = data;
 			listarUsuario(usuario.data);
+		})
+		.catch((error) => {
+			console.log("Error en las peticiones - " + error);
 		});
 
 	function getUsuarios() {
@@ -26,6 +32,24 @@ window.addEventListener("load", () => {
 
 	function getUsuario() {
 		return fetch("https://reqres.in/api/users/2");
+	}
+
+	function getInfo() {
+		var profesor = {
+			nombre: "Victor",
+			apellido: "Robles",
+			url: "https://victorroblesweb.com",
+		};
+		return new Promise((resolve, reject) => {
+			var profesorString = JSON.stringify(profesor);
+
+			setTimeout(function () {
+				if (typeof profesorString != "string" || profesorString == "")
+					return reject("error 1");
+
+				return resolve(profesorString);
+			}, 3000);
+		});
 	}
 
 	function listarUsuarios(usuarios) {
@@ -43,6 +67,6 @@ window.addEventListener("load", () => {
 		avatar.src = usuario.avatar;
 		avatar.style.width = "150px";
 		nombre.append(usuario.first_name + " " + usuario.last_name);
-		document.querySelector(".usuario").append(nombre, avatar);
+		document.querySelector("#usuario").append(nombre, avatar);
 	}
 });

@@ -21,8 +21,10 @@ $(function () {
 		.css("float", "left")
 		.css("border", "1px solid black")
 		.css("margin", "10px")
-		.css("width", "150px")
-		.css("height", "150px");
+		.css("padding", "10px")
+		.css("width", "250px")
+		.css("minHeight", "150px")
+		.css("height", "auto");
 
 	caja.click(function () {
 		// This hace referencia a la caja misma
@@ -45,4 +47,17 @@ $(function () {
 	// Selector de atributo
 	$('[href = "https://google.com"]').css("color", "red");
 	$('[title = "Twitter"]').css("color", "blue");
+
+	// Varios
+	$("p, a").addClass("mt");
+
+	//Find y parent
+
+	// Find, recorre el dom buscando el elemento indicado
+	var find = $("#caja").find(".resaltado");
+	console.log(find);
+
+	// Parent, va al elemento padre las veces que se repita la funcion, se puede usar con un find para encontrar un elemento
+	var parent = $("#elemento2").parent().parent().find(".resaltado");
+	console.log(parent);
 });

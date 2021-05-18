@@ -23,6 +23,13 @@
 				text-decoration: none;
 				color: black;
 			}
+			.mt {
+				display: block;
+				margin-top: 15px;
+			}
+			.resaltado {
+				border: 1px solid greenyellow;
+			}
 		</style>
 	</head>
 	<body>
@@ -31,7 +38,18 @@
 		<p id="verde">Practicando con selectores de ID</p>
 		<p id="azul">Yo voy a ser un párrafo azul</p>
 		<hr />
-		<div class="caja"></div>
+		<div class="caja" id="caja">
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet,
+				debitis!
+			</p>
+			<ul>
+				<li>Elemento 1</li>
+				<li id="elemento2">Elemento 2</li>
+				<li>Elemento 3</li>
+			</ul>
+			<span class="resaltado">Lorem ipsum dolor sit amet.</span>
+		</div>
 		<div class="caja"></div>
 		<div class="caja"></div>
 		<div class="clearfix"></div>

@@ -37,7 +37,7 @@ $(function () {
 	});
 
 	//* Focus y Blur
-
+	var datos = $("#datos");
 	var input = $("#nombre");
 	//? Focus
 	input.focus(function () {
@@ -49,6 +49,27 @@ $(function () {
 		$(this).css("border", "1px solid gray");
 
 		// Incrusto el valor del input en el div #datos y lo hago visible
-		$("#datos").text($(this).val()).show();
+		datos.text($(this).val()).show();
+	});
+
+	//* Mousedown y Mouseup
+
+	//? Mousedown
+	datos.mousedown(function () {
+		$(this).css("border-color", "green");
+	});
+
+	//? Mouseup
+	datos.mouseup(function () {
+		$(this).css("border-color", "gray");
+	});
+
+	//* Mousemove
+	$(document).mousemove(function (e) {
+		// values: e.clientX, e.clientY, e.pageX, e.pageY
+		$("body").css("cursor", "none");
+		var sigueme = $("#sigueme")
+			.css("left", e.clientX)
+			.css("top", e.clientY);
 	});
 });

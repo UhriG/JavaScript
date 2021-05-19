@@ -24,7 +24,9 @@ $(function () {
 	showHide.click(function (e) {
 		e.preventDefault();
 		// caja.toggle("fast");
-		caja.slideToggle();
+		caja.slideToggle("slow", function () {
+			console.log("Caja activada/desactivada");
+		});
 	});
 
 	//* fadeIn y fadeOut
@@ -43,5 +45,15 @@ $(function () {
 		caja.fadeOut("slow");
 		$(this).hide();
 		fadeIn.fadeIn();
+	});
+
+	//* Animaciones personalizadas con animate
+
+	var animar = $("#animar");
+	animar.click(function () {
+		caja.animate({ marginLeft: "500px", borderRadius: "50%" }, "slow")
+			.animate({ marginTop: "200px" }, "slow")
+			.animate({ marginLeft: "0px" }, "slow")
+			.animate({ marginTop: "10px", borderRadius: "0%" }, "slow");
 	});
 });

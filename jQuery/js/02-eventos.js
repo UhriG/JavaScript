@@ -35,4 +35,20 @@ $(function () {
 	caja.dblclick(function () {
 		$(this).css("border", "5px solid black");
 	});
+
+	//* Focus y Blur
+
+	var input = $("#nombre");
+	//? Focus
+	input.focus(function () {
+		$(this).css("border", "2px solid green");
+	});
+
+	//? Blur
+	input.blur(function () {
+		$(this).css("border", "1px solid gray");
+
+		// Incrusto el valor del input en el div #datos y lo hago visible
+		$("#datos").text($(this).val()).show();
+	});
 });

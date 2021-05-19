@@ -23,4 +23,16 @@ $(function () {
 			$(this).css("background-color", "green");
 		}
 	);
+
+	//* Click, Doble click
+
+	//? click
+	caja.click(function () {
+		$(this).css("border", "5px solid orange");
+	});
+
+	//? doble click
+	caja.dblclick(function () {
+		$(this).css("border", "5px solid black");
+	});
 });

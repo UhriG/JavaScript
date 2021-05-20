@@ -13,11 +13,39 @@
 				width: 250px;
 				min-height: 250px;
 				height: auto;
+				margin-top: 10px;
+			}
+
+			#msg {
+				padding: 5px;
+				border-radius: 5px;
+				margin-top: 3px;
+				color: rgb(39, 39, 39);
+				display: none;
+				width: 200px;
+				text-align: center;
+			}
+
+			.msg-success {
+				background-color: rgb(119, 230, 119);
+			}
+			.msg-error {
+				background-color: rgb(226, 109, 109);
 			}
 		</style>
 	</head>
 	<body>
 		<h1>Ajax con jQuery</h1>
+
+		<form action="https://reqres.in/api/users" method="post" id="registrar">
+			<label for="nombre">Nombre:</label>
+			<input type="text" name="nombre" />
+			<label for="edad">Edad:</label>
+			<input type="number" name="edad" />
+			<input type="submit" value="Registrar" />
+		</form>
+		<div id="msg"></div>
+
 		<div id="datos"></div>
 	</body>
 </html>

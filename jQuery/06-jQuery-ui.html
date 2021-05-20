@@ -5,17 +5,79 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>jQuery UI</title>
-		<script src="js/jquery-3.6.0.min.js"></script>
-		<script src="js/jquery-ui/jquery-ui.min.js"></script>
-		<script src="js/06-jQuery-ui.js"></script>
 		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
 		<link
 			rel="stylesheet"
 			href="js/jquery-ui/jquery-ui.structure.min.css"
 		/>
 		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/jquery-ui/jquery-ui.min.js"></script>
+		<script src="js/06-jQuery-ui.js"></script>
+
+		<style>
+			.elemento {
+				width: 300px;
+				height: 200px;
+				border: 2px solid black;
+				margin: 10px;
+				background-color: lightblue;
+				float: left;
+				padding: 20px;
+			}
+			.clearfix {
+				clear: both;
+			}
+
+			.lista-seleccionable li {
+				width: 80%;
+				padding: 20px;
+				border: 1px solid #ccc;
+				list-style: none;
+				cursor: pointer;
+			}
+
+			ul .ui-selecting {
+				background-color: rgb(105, 197, 105);
+			}
+			ul .ui-selected {
+				background-color: rgb(151, 248, 227);
+			}
+
+			#movible {
+				width: 100px;
+				height: 100px;
+				border: 2px solid red;
+			}
+
+			#area {
+				width: 200px;
+				height: 200px;
+				border: 2px solid green;
+			}
+			.caja-efectos {
+				background-color: indianred;
+				float: none;
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>jQuery UI</h1>
+		<button id="mostrar">Mostrar</button>
+		<div class="caja-efectos elemento"></div>
+		<div id="movible"></div>
+		<br />
+		<div id="area"></div>
+		<ul class="lista-seleccionable">
+			<li>Gta V</li>
+			<li>PES 2021</li>
+			<li>NFS</li>
+			<li>CSS 1.6</li>
+			<li>COD</li>
+		</ul>
+		<div class="elemento">Soy un elemento de la web - 1</div>
+		<div class="elemento">Soy un elemento de la web - 2</div>
+		<div class="elemento">Soy un elemento de la web - 3</div>
 	</body>
 </html>

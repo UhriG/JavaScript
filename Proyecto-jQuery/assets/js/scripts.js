@@ -1,3 +1,8 @@
 $(document).ready(function () {
-	console.log("ready");
+	$(".bxslider").bxSlider({
+		mode: "fade",
+		captions: true,
+		slideWidth: 1200,
+		auto: true,
+	});
 });

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>jQuery UI</title>
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+		<link
+			rel="stylesheet"
+			href="js/jquery-ui/jquery-ui.structure.min.css"
+		/>
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/jquery-ui/jquery-ui.min.js"></script>
+		<script src="js/07-jQuery-ui-widgets.js"></script>
+		<style>
+			.btn {
+				text-decoration: none;
+				color: black;
+				background: lightblue;
+				border: lightskyblue;
+				padding: 5px 15px;
+				margin-right: 10px;
+				border-radius: 10px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>jQuery UI Widgets</h1>
+		<h3>Tooltip</h3>
+		<a href="#" class="btn" title="Cristian Uhrig">Mi nombre</a>
+		<a href="#" class="btn" title="28 años">Mi edad</a>
+		<a href="#" class="btn" title="Desarrollador junior">Mi profesión</a>
+		<hr />
+		<h3>Popups</h3>
+		<button id="activarPopUp">Mostrar PopUp</button>
+		<div id="popUp" title="Titulo popup">
+			<p>Contenido popup</p>
+		</div>
+		<hr />
+		<h3>Calendario</h3>
+		<input type="text" id="calendario" />
+		<hr />
+		<h3>Tabs/Pestañas</h3>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Pestaña 1</a></li>
+				<li><a href="#tabs-2">Pestaña 2</a></li>
+				<li><a href="#tabs-3">Pestaña 3</a></li>
+			</ul>
+			<div id="tabs-1">Contenido primer pestaña</div>
+			<div id="tabs-2">Contenido segunda pestaña</div>
+			<div id="tabs-3">Contenido tercera pestaña</div>
+		</div>
+	</body>
+</html>

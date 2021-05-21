@@ -5,12 +5,6 @@
 	text-decoration: none;
 }
 
-body {
-	background: url("../img/hojas.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-}
-
 .clearfix {
 	clear: both;
 }
@@ -26,9 +20,8 @@ body {
 
 #logo {
 	font-family: Verdana, Arial, Tahoma, sans-serif;
-	font-size: 25px;
+	font-size: 20px;
 	letter-spacing: 4px;
-	background-color: #235e3d;
 	color: white;
 	text-transform: uppercase;
 	text-align: center;
@@ -57,10 +50,6 @@ body {
 	height: 46px;
 	display: inline-block;
 	transition: all 300ms;
-}
-
-#menu ul li:hover {
-	background-color: #235e3d;
 }
 
 #menu ul li a {
@@ -101,7 +90,6 @@ body {
 
 .btn-more {
 	padding: 5px 15px;
-	background: #235e3d;
 	margin-top: 5px;
 	display: block;
 	text-align: center;
@@ -160,16 +148,11 @@ form input[type="email"] {
 }
 
 form input[type="submit"] {
-	background: #ccc;
 	padding: 5px 20px;
 	border-radius: 5px;
 	border: 1px solid #eee;
 	cursor: pointer;
-	color: #333;
-}
-
-form input[type="submit"]:hover {
-	background: #ddd;
+	color: #fff;
 }
 
 footer {
@@ -186,4 +169,44 @@ footer {
 .bx-wrapper,
 .bx-viewport {
 	height: 250px !important;
+}
+
+#themeSwitch {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 40%;
+	left: 0;
+	background: rgba(51, 51, 51, 0.5);
+	width: 50px;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+#toRed {
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	margin: 5px 5px;
+	cursor: pointer;
+	background-color: #812525;
+}
+
+#toGreen {
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	margin: 5px 5px;
+	cursor: pointer;
+	background-color: #235e3d;
+}
+
+#toBlue {
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	margin: 5px 5px;
+	cursor: pointer;
+	background-color: #225597;
 }

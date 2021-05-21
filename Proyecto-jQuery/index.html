@@ -20,14 +20,22 @@
 			href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/green.css" id="template" />
 		<!-- Javascript -->
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es-mx.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
 
 		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	</head>
 	<body>
+		<div id="themeSwitch">
+			<div id="toRed" class="btnTheme"></div>
+			<div id="toGreen" class="btnTheme"></div>
+			<div id="toBlue" class="btnTheme"></div>
+		</div>
 		<main id="main">
 			<!-- Inicio header -->
 			<header>
@@ -63,72 +71,7 @@
 			<!-- Inicio contenido -->
 			<section id="content">
 				<div id="posts">
-					<article class="post">
-						<h2>Titulo articulo</h2>
-						<span class="date">Fecha de publicación</span>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Placeat obcaecati labore quia quidem facilis
-							debitis voluptatem alias eveniet quasi! Sunt saepe
-							nostrum nam delectus quis veritatis, eos eveniet
-							laboriosam dolore fuga fugit veniam assumenda animi
-							nulla nihil sapiente ea ullam id ut doloribus. Quis
-							eaque accusamus aliquam? Dolorem blanditiis, velit
-							voluptas fugit obcaecati magni saepe ducimus laborum
-							quos eaque aut veritatis dolor accusamus harum rerum
-							dicta molestias quas veniam dolores? Tenetur animi
-							veniam numquam voluptate mollitia distinctio,
-							possimus laboriosam. Iusto nulla quidem dolore error
-							consequatur, alias itaque! Aliquam natus voluptatum
-							ullam adipisci facilis tenetur, iure, repellendus
-							cum saepe laborum provident.
-						</p>
-						<a href="" class="btn-more">Leer más</a>
-					</article>
-					<article class="post">
-						<h2>Titulo articulo</h2>
-						<span class="date">Fecha de publicación</span>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Placeat obcaecati labore quia quidem facilis
-							debitis voluptatem alias eveniet quasi! Sunt saepe
-							nostrum nam delectus quis veritatis, eos eveniet
-							laboriosam dolore fuga fugit veniam assumenda animi
-							nulla nihil sapiente ea ullam id ut doloribus. Quis
-							eaque accusamus aliquam? Dolorem blanditiis, velit
-							voluptas fugit obcaecati magni saepe ducimus laborum
-							quos eaque aut veritatis dolor accusamus harum rerum
-							dicta molestias quas veniam dolores? Tenetur animi
-							veniam numquam voluptate mollitia distinctio,
-							possimus laboriosam. Iusto nulla quidem dolore error
-							consequatur, alias itaque! Aliquam natus voluptatum
-							ullam adipisci facilis tenetur, iure, repellendus
-							cum saepe laborum provident.
-						</p>
-						<a href="" class="btn-more">Leer más</a>
-					</article>
-					<article class="post">
-						<h2>Titulo articulo</h2>
-						<span class="date">Fecha de publicación</span>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Placeat obcaecati labore quia quidem facilis
-							debitis voluptatem alias eveniet quasi! Sunt saepe
-							nostrum nam delectus quis veritatis, eos eveniet
-							laboriosam dolore fuga fugit veniam assumenda animi
-							nulla nihil sapiente ea ullam id ut doloribus. Quis
-							eaque accusamus aliquam? Dolorem blanditiis, velit
-							voluptas fugit obcaecati magni saepe ducimus laborum
-							quos eaque aut veritatis dolor accusamus harum rerum
-							dicta molestias quas veniam dolores? Tenetur animi
-							veniam numquam voluptate mollitia distinctio,
-							possimus laboriosam. Iusto nulla quidem dolore error
-							consequatur, alias itaque! Aliquam natus voluptatum
-							ullam adipisci facilis tenetur, iure, repellendus
-							cum saepe laborum provident.
-						</p>
-						<a href="" class="btn-more">Leer más</a>
-					</article>
+					<!-- Aca se cargan los posts a traves de JSON -->
 				</div>
 
 				<!-- Inicio sidebar -->

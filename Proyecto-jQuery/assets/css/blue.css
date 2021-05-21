@@ -1,0 +1,32 @@
+body {
+	background: url("../img/cielo.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#logo {
+	background-color: #225597;
+	color: white;
+}
+
+#menu ul li:hover {
+	background-color: #225597;
+}
+
+.btn-more {
+	background: #225597;
+	color: #fff;
+}
+
+.btn-more:hover {
+	background: #4464ce;
+}
+
+form input[type="submit"] {
+	background: #225597;
+	color: #fff;
+}
+
+form input[type="submit"]:hover {
+	background: #225597;
+}

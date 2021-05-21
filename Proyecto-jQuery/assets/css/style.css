@@ -210,3 +210,9 @@ footer {
 	cursor: pointer;
 	background-color: #225597;
 }
+
+.goUp {
+	display: block;
+	color: white;
+	float: right;
+}

@@ -94,4 +94,17 @@ $(document).ready(function () {
 	$("#toBlue").click(function () {
 		template.attr("href", "assets/css/blue.css");
 	});
+
+	// Scroll up de la página
+	$(".goUp").click(function (e) {
+		e.preventDefault();
+
+		$("html, body").animate(
+			{
+				scrollTop: 0,
+			},
+			500
+		);
+		return false;
+	});
 });

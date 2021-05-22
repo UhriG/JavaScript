@@ -137,7 +137,9 @@
 
 form input[type="text"],
 form input[type="password"],
-form input[type="email"] {
+form input[type="email"],
+form input[type="number"],
+select {
 	padding: 5px;
 	border: 1px solid #ccc;
 	border-radius: 2px;
@@ -215,4 +217,63 @@ footer {
 	display: block;
 	color: white;
 	float: right;
+}
+
+#box {
+	width: 60%;
+	float: left;
+	margin-top: 50px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#box h2 {
+	font-size: 25px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+#contenedorReloj {
+	float: left;
+	width: 65%;
+	margin-top: 50px;
+}
+
+#reloj {
+	font-size: 40px;
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #333;
+	border: 5px solid #333;
+	padding: 15px 30px;
+	width: 40%;
+	text-align: center;
+	display: block;
+	margin: 0px auto;
+	border-radius: 25px;
+}
+
+#contacto {
+	float: left;
+	width: 65%;
+}
+
+#contactForm {
+	width: 50%;
+
+	font-family: Helvetica, Arial, sans-serif;
+	display: block;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+
+#contactForm label {
+	width: 100%;
+	display: block;
+	margin-top: 5px;
+}
+
+.error {
+	display: block;
+	color: red;
+	margin-bottom: 5px;
 }

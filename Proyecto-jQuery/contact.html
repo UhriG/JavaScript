@@ -15,20 +15,14 @@
 			rel="stylesheet"
 			href="assets/js/jquery-ui/jquery-ui.theme.min.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
-		/>
+
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<link rel="stylesheet" href="assets/css/green.css" id="template" />
 		<!-- Javascript -->
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es-mx.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
-
-		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	</head>
 	<body>
 		<div id="themeSwitch">
@@ -52,26 +46,29 @@
 			</header>
 			<!-- Fin header -->
 
-			<!-- Slider -->
-			<div id="slider">
-				<div class="bxslider">
-					<div>
-						<img src="assets/img/rojo.jpg" title="Red trees" />
-					</div>
-					<div>
-						<img src="assets/img/cielo.jpg" title="Sky" />
-					</div>
-					<div>
-						<img src="assets/img/hojas.jpg" title="Leafs" />
-					</div>
-				</div>
-			</div>
-			<!-- Fin slider -->
-
 			<!-- Inicio contenido -->
 			<section id="content">
-				<div id="posts">
-					<!-- Aca se cargan los posts a traves de JSON -->
+				<div id="contacto">
+					<h2>Contacto</h2>
+					<!-- Formulario de contacto con form-validate -->
+					<form action="" id="contactForm" method="POST">
+						<label for="name">Nombre</label>
+						<input type="text" name="name" id="" required />
+						<label for="surname">Apellido</label>
+						<input type="text" name="surname" id="" required />
+						<label for="email">Email</label>
+						<input type="email" name="email" id="" required />
+						<label for="sex">Género</label>
+						<select name="sex" id="" required>
+							<option value="man">Hombre</option>
+							<option value="woman">Mujer</option>
+						</select>
+						<label for="date">Fecha de nacimiento</label>
+						<input type="text" name="date" id="" required />
+						<label for="age">Edad</label>
+						<input type="number" name="age" id="" required />
+						<input type="submit" value="Enviar" />
+					</form>
 				</div>
 
 				<!-- Inicio sidebar -->

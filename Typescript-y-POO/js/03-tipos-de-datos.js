@@ -17,3 +17,14 @@ var usuario = "Cristian";
 usuario = 123; // Puedo cambiar a un numero porque ahora mi variable usuario acepta tanto strings como numeros
 var username = "Uhrig123";
 username = 123;
+/*LET vs VAR */
+// var scope global
+// let scope de bloque
+var n1 = 10;
+var n2 = 12;
+if (n1 == 10) {
+    var n1_1 = 44;
+    var n2 = 55;
+    console.log(n1_1, n2); // 44 y 55
+}
+console.log(n1, n2); //10 y 55

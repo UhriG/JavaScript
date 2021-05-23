@@ -26,3 +26,17 @@ usuario = 123; // Puedo cambiar a un numero porque ahora mi variable usuario ace
 type alfanumerico = string | number;
 let username: alfanumerico = "Uhrig123";
 username = 123;
+
+/*LET vs VAR */
+// var scope global
+// let scope de bloque
+
+var n1 = 10;
+var n2 = 12;
+
+if (n1 == 10) {
+	let n1 = 44;
+	var n2 = 55;
+	console.log(n1, n2); // 44 y 55
+}
+console.log(n1, n2); //10 y 55

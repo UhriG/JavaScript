@@ -20,4 +20,4 @@ var Camiseta = /** @class */ (function () {
 }());
 var camiseta = new Camiseta("Rojo", "Manga corta", "Vans", "XXL", 700);
 camiseta.setColor("Verde");
-console.log(camiseta);
+// console.log(camiseta);

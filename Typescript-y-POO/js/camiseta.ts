@@ -1,5 +1,11 @@
+// Interface
+interface CamisetaBase {
+	setColor(color: string): void;
+	getColor(): string;
+}
+
 // Clases (molde del objeto)
-class Camiseta {
+class Camiseta implements CamisetaBase {
 	// Propiedades (caracteristicas del objeto)
 	private color!: string;
 	private modelo!: string;
@@ -35,4 +41,4 @@ var camiseta = new Camiseta("Rojo", "Manga corta", "Vans", "XXL", 700);
 
 camiseta.setColor("Verde");
 
-console.log(camiseta);
+// console.log(camiseta);

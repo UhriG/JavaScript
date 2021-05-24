@@ -37,8 +37,25 @@ class Camiseta implements CamisetaBase {
 		return this.color;
 	}
 }
+
 var camiseta = new Camiseta("Rojo", "Manga corta", "Vans", "XXL", 700);
-
 camiseta.setColor("Verde");
+console.log(camiseta);
 
-// console.log(camiseta);
+// Herencia
+// Clase hija
+class Campera extends Camiseta {
+	public capucha!: boolean;
+
+	setCapucha(capucha: boolean) {
+		this.capucha = capucha;
+	}
+
+	getCapucha(): boolean {
+		return this.capucha;
+	}
+}
+
+var campera = new Campera("Negro", "Estampada", "Adidas", "XXL", 1900);
+campera.setCapucha(true);
+console.log(campera);

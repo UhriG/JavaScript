@@ -4,7 +4,19 @@ interface CamisetaBase {
 	getColor(): string;
 }
 
+// Decorador
+function estampar(logo: string) {
+	return function (target: Function) {
+		target.prototype.estamparLogo = function (): void {
+			console.log("Camiseta estampada con el logo de " + logo);
+		};
+	};
+}
+
 // Clases (molde del objeto)
+
+//Apicar decorador
+@estampar("Adidas")
 class Camiseta implements CamisetaBase {
 	// Propiedades (caracteristicas del objeto)
 	private color!: string;
@@ -40,6 +52,7 @@ class Camiseta implements CamisetaBase {
 
 var camiseta = new Camiseta("Rojo", "Manga corta", "Vans", "XXL", 700);
 camiseta.setColor("Verde");
+camiseta.estamparLogo();
 console.log(camiseta);
 
 // Herencia

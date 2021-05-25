@@ -1,12 +1,22 @@
-<h1>{{ title }}</h1>
+<div
+  [ngStyle]="{
+    color: config.color,
+    backgroundColor: config.fondo,
+    padding: '20px',
+    border: '4px solid blue'
+  }"
+>
+  <h1>{{ title }}</h1>
+  <h3>{{ description }}</h3>
 
-<button (click)="ocultarVideojuegos(false)" *ngIf="mostrarVideojuegos">
-  Ocultar videojuegos
-</button>
-<button (click)="ocultarVideojuegos(true)" *ngIf="!mostrarVideojuegos">
-  Mostrar videojuegos
-</button>
+  <button (click)="ocultarVideojuegos(false)" *ngIf="mostrarVideojuegos">
+    Ocultar videojuegos
+  </button>
+  <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrarVideojuegos">
+    Mostrar videojuegos
+  </button>
 
-<videojuego *ngIf="mostrarVideojuegos"></videojuego>
-<zapatillas></zapatillas>
-<app-cursos></app-cursos>
+  <videojuego *ngIf="mostrarVideojuegos"></videojuego>
+  <zapatillas></zapatillas>
+  <app-cursos></app-cursos>
+</div>

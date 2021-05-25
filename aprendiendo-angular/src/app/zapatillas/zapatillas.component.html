@@ -1,7 +1,13 @@
 <h3>{{ titulo }}</h3>
 <p>{{ listado }}</p>
 <ul>
-  <li>Nike</li>
-  <li>Puma</li>
-  <li>Adidas</li>
+  <li *ngFor="let zapatilla of zapatillas">
+    {{ zapatilla.nombre }} - <strong>${{ zapatilla.precio }}</strong>
+    <span
+      *ngIf="zapatilla.precio <= 3900"
+      [style.color]="zapatilla.precio <= 3900 ? 'green' : 'transparent'"
+    >
+      - ¡En oferta!</span
+    >
+  </li>
 </ul>

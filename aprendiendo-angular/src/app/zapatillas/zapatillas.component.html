@@ -1,7 +1,14 @@
 <h3>{{ titulo }}</h3>
 <p>Añadir marca:</p>
 <p>
-  <input type="text" name="" id="" [(ngModel)]="miMarca" />
+  <input
+    type="text"
+    name=""
+    id=""
+    [(ngModel)]="miMarca"
+    (blur)="onBlur()"
+    (keyup.enter)="onKeyUp()"
+  />
   <button (click)="getMarca()">Ver marca</button>
   <button (click)="addMarca()">Añadir marca</button>
 </p>

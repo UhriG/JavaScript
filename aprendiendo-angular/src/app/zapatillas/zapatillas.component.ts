@@ -49,4 +49,10 @@ export class ZapatillasComponent implements OnInit {
     //delete this.marcas[indice];
     this.marcas.splice(indice, 1);
   }
+  onBlur() {
+    console.log('Has salido del input');
+  }
+  onKeyUp() {
+    console.log('Has presionado la tecla enter');
+  }
 }

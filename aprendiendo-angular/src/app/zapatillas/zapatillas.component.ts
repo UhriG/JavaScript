@@ -11,7 +11,9 @@ export class ZapatillasComponent implements OnInit {
   public zapatillas: Array<Zapatilla>;
   public marcas!: string[];
   public color: string;
+  public miMarca: string;
   constructor() {
+    this.miMarca = 'Adidas';
     this.color = 'yellow';
     this.marcas = new Array();
     this.titulo = 'Componente de Zapatillas';
@@ -30,11 +32,21 @@ export class ZapatillasComponent implements OnInit {
   }
 
   getMarcas() {
-    this.zapatillas.forEach((zapatilla) => {
+    this.zapatillas.forEach((zapatilla, index) => {
       if (this.marcas.indexOf(zapatilla.marca) < 0) {
         this.marcas.push(zapatilla.marca);
       }
     });
     console.log(this.marcas);
+  }
+  getMarca() {
+    alert(this.miMarca);
+  }
+  addMarca() {
+    this.marcas.push(this.miMarca);
+  }
+  deleteMarca(indice: number) {
+    //delete this.marcas[indice];
+    this.marcas.splice(indice, 1);
   }
 }

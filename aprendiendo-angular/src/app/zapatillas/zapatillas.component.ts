@@ -10,7 +10,9 @@ export class ZapatillasComponent implements OnInit {
   public listado: string;
   public zapatillas: Array<Zapatilla>;
   public marcas!: string[];
+  public color: string;
   constructor() {
+    this.color = 'yellow';
     this.marcas = new Array();
     this.titulo = 'Componente de Zapatillas';
     this.listado = 'Listado de las zapatillas más populares';

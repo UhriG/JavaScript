@@ -15,7 +15,13 @@ export class CursosComponent implements OnInit {
     this._route.params.subscribe((params: Params) => {
       this.nombre = params.nombre;
       this.followers = +params.followers; // El más para que sea de tipo number
-      //   this.nombre = params['nombre'];
+
+      if (this.nombre == 'ninguno') {
+        this._router.navigate(['/home']);
+      }
     });
+  }
+  redirigir() {
+    this._router.navigate(['zapatillas']);
   }
 }

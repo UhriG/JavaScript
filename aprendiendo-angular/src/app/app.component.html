@@ -9,6 +9,20 @@
   <h1>{{ title }}</h1>
   <h3>{{ description }}</h3>
 
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a> &nbsp;
+    <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']"
+      >Zapatillas</a
+    >&nbsp;
+    <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a
+    >&nbsp;
+    <a [routerLink]="['/videojuegos']" [routerLinkActive]="['active']"
+      >Videojuegos</a
+    >&nbsp;
+  </nav>
+
+  <hr />
+
   <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrarVideojuegos">
     Ocultar videojuegos
   </button>
@@ -17,6 +31,7 @@
   </button> -->
 
   <!-- <videojuego *ngIf="mostrarVideojuegos"></videojuego> -->
-  <zapatillas></zapatillas>
+  <!-- <zapatillas></zapatillas> -->
   <!-- <app-cursos></app-cursos> -->
+  <router-outlet></router-outlet>
 </div>

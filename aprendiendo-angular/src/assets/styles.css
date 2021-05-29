@@ -1,3 +1,7 @@
+* {
+  text-decoration: none;
+}
+
 .precioAlto {
   color: whitesmoke;
   font-size: 18px;
@@ -9,4 +13,13 @@
 
 .subrayado {
   text-decoration: underline;
+}
+
+.active {
+  color: blue;
+  font-weight: bold;
+}
+
+nav a {
+  color: black;
 }

@@ -1,7 +1,14 @@
+<!-- Pipes de fecha -->
 <p>{{ fecha | date: "fullDate" }}</p>
-<hr />
 <p>{{ fecha | date: "dd/MM/yy" }}</p>
 <hr />
+
+<!-- Pipes de texto -->
+<p>{{ "Lorem ipsum dolor sit amet." | uppercase }}</p>
+<p>{{ "TEXTO CONVERTIDO A MINUSCULAS CON UNA PIPE" | lowercase }}</p>
+<hr />
+<!-- Pipe personalizada -->
+<p>{{ 10 | calculadora: 2 }}</p>
 
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargarUsuario()" />
 

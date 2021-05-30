@@ -1,4 +1,11 @@
+<p>{{ fecha | date: "fullDate" }}</p>
+<hr />
+<p>{{ fecha | date: "dd/MM/yy" }}</p>
+<hr />
+
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargarUsuario()" />
+
+<div class="" *ngIf="!user">Cargando</div>
 
 <div class="" *ngIf="user">
   <h2>{{ user.first_name + " " + user.last_name }}</h2>

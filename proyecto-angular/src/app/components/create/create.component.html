@@ -1,1 +1,91 @@
-<p>create works!</p>
+<div class="container">
+  <h2>{{ title }}</h2>
+
+  <div class="message success" *ngIf="status == 'true'">
+    El proyecto se ha creado correctamente, puedes verlo <a href="">aquí</a>
+  </div>
+  <div class="message error" *ngIf="status == 'false'">
+    El proyecto no se ha podido crear
+  </div>
+
+  <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+    <p>
+      <label for="name">Nombre:</label>
+      <input
+        type="text"
+        name="name"
+        id=""
+        #name="ngModel"
+        [(ngModel)]="project.name"
+        required
+      />
+      <span class="formError" *ngIf="name.touched && !name.valid"
+        >Ingrese un nombre válido</span
+      >
+    </p>
+    <p>
+      <label for="description">Descripción:</label>
+      <textarea
+        type="text"
+        name="description"
+        id=""
+        #description="ngModel"
+        [(ngModel)]="project.description"
+        required
+      ></textarea>
+      <span class="formError" *ngIf="description.touched && !description.valid"
+        >Ingrese una descripción válida</span
+      >
+    </p>
+    <p>
+      <label for="category">Categoria:</label>
+      <input
+        type="text"
+        name="category"
+        id=""
+        #category="ngModel"
+        [(ngModel)]="project.category"
+        required
+      />
+      <span class="formError" *ngIf="category.touched && !category.valid"
+        >Ingrese una categoria válida</span
+      >
+    </p>
+    <p>
+      <label for="year">Año de lanzamiento:</label>
+      <input
+        type="number"
+        name="year"
+        id=""
+        #year="ngModel"
+        [(ngModel)]="project.year"
+      />
+    </p>
+    <p>
+      <label for="langs">Lenguajes:</label>
+      <input
+        type="text"
+        name="langs"
+        id=""
+        #langs="ngModel"
+        [(ngModel)]="project.langs"
+        required
+      />
+      <span class="formError" *ngIf="langs.touched && !langs.valid"
+        >Ingrese lenguajes válidos</span
+      >
+    </p>
+    <p>
+      <label for="image">Imagen:</label>
+      <input
+        type="file"
+        name="image"
+        id=""
+        #image=""
+        placeholder="Subir imágen"
+        (change)="fileChangeEvent($event)"
+      />
+    </p>
+    <input type="submit" value="Guardar" [disabled]="!projectForm.form.valid" />
+  </form>
+</div>
